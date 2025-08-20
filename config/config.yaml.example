@@ -1,0 +1,35 @@
+# Datarus Pipeline Configuration
+
+# Model Configuration
+model:
+  endpoint: "http://localhost:8000/v1/chat/completions"
+  model_name: "Datarus/Datarus-R1-14B-preview"
+  temperature: 0.7
+  max_tokens: 2048
+  stream: false
+  stop_tokens:
+    - "</step>"
+    - "</stop_analysis>"
+    - "<｜end▁of▁sentence｜>"
+
+# Docker Configuration
+docker:
+  image: "jupyter/tensorflow-notebook"
+  remote_server_ip: "localhost"
+  docker_port: 2375
+  jupyter_port: 8881
+  container_prefix: "datarus_container"
+  memory_limit: "8g"
+  cpu_quota: 80000
+
+# Pipeline Configuration
+pipeline:
+  max_iterations: 30
+  execution_timeout: 60
+  max_consecutive_errors: 5
+  output_truncate_length: 10000
+
+# Development Configuration
+development:
+  debug: false
+  container_cleanup: true
