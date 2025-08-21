@@ -26,7 +26,7 @@ The **Datarus Jupyter Agent** is a powerful multi-step reasoning system that exe
 
 We built this pipeline specifically for **Datarus-R1-14B-Preview**, our 14B-parameter language model that achieves up to 30% higher accuracy on AIME 2024/2025 and LiveCodeBench while emitting 18–49% fewer tokens compared to similar size models. Datarus-R1-14B-Preview is fine-tuned from Qwen 2.5-14B-Instruct to act as a virtual data analyst, trained on full analytical trajectories including reasoning steps, code execution, error traces, and self-corrections.
 
-
+![demo](./assets/DatarusAI-JupyterAgent.gif)
 
 ## ✨ Features
 
